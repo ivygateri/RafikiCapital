@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { mobile } from "../responsive";
 import { Menu} from "@material-ui/icons";
 
+
 const Container = styled.div`
   height: 30px;
   background-color: #1AA00D;
@@ -22,11 +23,16 @@ const Left = styled.div`
   align-items: center;
 `;
 
-const MenuItem = styled.div`
+const MenuItem = styled.a`
     padding: 0px 35px;
   font-size: 20px;
   cursor: pointer;
   margin-left: 25px;
+  &:hover {
+    color: black;
+    text-decoration: underline;
+    transform: scale(1.1);
+  }
   ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
 
@@ -44,7 +50,7 @@ const Links = () => {
         <Left>
        <MenuItem>Home</MenuItem> 
        <MenuItem>About</MenuItem>
-       <MenuItem>Contact</MenuItem>
+       <MenuItem>Contact Us</MenuItem>
        </Left>
        <Right><Menu/></Right>
     </Wrapper>

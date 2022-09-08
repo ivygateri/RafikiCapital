@@ -1,23 +1,23 @@
 export const sliderItems = [
     {
       id: 1,
-      img: "https://i.ibb.co/XsdmR2c/1.png",
-      title: "SUMMER SALE",
-      desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+      img: "https://www.kindpng.com/picc/m/193-1936544_transparent-background-png-vegetables-png-png-download.png",
+      title: "FRESH VEGETABLES",
+      desc: "DON'T COMPROMISE ON FRESHNESS! GET VEGETABLES STRAIGHT FROM THE FARM.",
       bg: "f5fafd",
     },
     {
       id: 2,
-      img: "https://i.ibb.co/DG69bQ4/2.png",
-      title: "AUTUMN COLLECTION",
-      desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+      img: "https://www.pngall.com/wp-content/uploads/2016/05/Strawberry-Download-PNG.png",
+      title: "SEASON FRUITS",
+      desc: "DON'T COMPROMISE ON FRESHNESS! GET SEASON FRUITS STRAIGHT FROM THE FARM.",
       bg: "fcf1ed",
     },
     {
       id: 3,
-      img: "https://i.ibb.co/cXFnLLV/3.png",
-      title: "LOUNGEWEAR LOVE",
-      desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+      img: "https://www.kindpng.com/picc/m/111-1113758_banana-fruit-hd-png-download.png",
+      title: "ORGANIC FRUITS",
+      desc: "DON'T COMPROMISE ON AUTHENTICITY! GET ORGANIC FRUITS STRAIGHT FROM THE FARM.",
       bg: "fbf0f4",
     },
   ];

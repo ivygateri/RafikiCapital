@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { mobile } from "../responsive";
 import { Menu} from "@material-ui/icons";
-
+import {Link} from "react-router-dom";
 
 const Container = styled.div`
   height: 30px;
@@ -23,16 +23,13 @@ const Left = styled.div`
   align-items: center;
 `;
 
-const MenuItem = styled.a`
+const MenuItem = styled.div`
     padding: 0px 35px;
   font-size: 20px;
   cursor: pointer;
   margin-left: 25px;
-  &:hover {
-    color: black;
-    text-decoration: underline;
-    transform: scale(1.1);
-  }
+  text-decoration:none;
+  
   ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
 
@@ -43,14 +40,26 @@ const Right = styled.div`
   justify-content: flex-end;
   ${mobile({ flex: 2, justifyContent: "center" })}
 `;
-
+ const NavLink = styled(Link)`
+ color: black;
+ text-decoration:none;
+ &:hover {
+  text-decoration:underline;
+  color: #FCE205;
+  transform: scale(1.1);
+}
+ &: active{
+  color: #FCE205;
+  
+}
+ `
 const Links = () => {
   return <Container>
     <Wrapper>
         <Left>
-       <MenuItem>Home</MenuItem> 
-       <MenuItem>About</MenuItem>
-       <MenuItem>Contact Us</MenuItem>
+       <MenuItem><NavLink to="/">Home</NavLink></MenuItem> 
+       <MenuItem><NavLink to="/about">About</NavLink></MenuItem>
+       <MenuItem><NavLink to="/contact">Contact Us</NavLink></MenuItem>
        </Left>
        <Right><Menu/></Right>
     </Wrapper>

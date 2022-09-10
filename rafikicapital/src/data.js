@@ -2,7 +2,7 @@ export const sliderItems = [
     {
       id: 1,
       img: "https://www.kindpng.com/picc/m/193-1936544_transparent-background-png-vegetables-png-png-download.png",
-      title: "FRESH VEGETABLES",
+      title: "FRESH VEGIES",
       desc: "DON'T COMPROMISE ON FRESHNESS! GET VEGETABLES STRAIGHT FROM THE FARM.",
       bg: "f5fafd",
     },

@@ -9,6 +9,7 @@ import {
   } from "@material-ui/icons";
   import styled from "styled-components";
   import { mobile } from "../responsive";
+  import { Link } from "react-router-dom";
   
   const Container = styled.div`
     display: flex;
@@ -64,6 +65,7 @@ import {
   const ListItem = styled.li`
     width: 50%;
     margin-bottom: 10px;
+    text-decoration:none;
   `;
   
   const Right = styled.div`
@@ -79,6 +81,15 @@ import {
     align-items: center;
   `;
   
+  const NavLink = styled(Link)`
+ color: black;
+ text-decoration:none;
+ &:hover {
+  
+  color: #FCE205;
+  transform: scale(1.1);
+}
+ `
   
   const Footer = () => {
     return (
@@ -103,9 +114,9 @@ import {
         <Center>
           <Title>Useful Links</Title>
           <List>
-            <ListItem>Home</ListItem>
-            <ListItem>About</ListItem>
-            <ListItem>Contact Us</ListItem>
+            <ListItem><NavLink to="/">Home</NavLink></ListItem>
+            <ListItem><NavLink to="/about">About</NavLink></ListItem>
+            <ListItem><NavLink to="/contact">Contact Us</NavLink></ListItem>
             <ListItem>Terms</ListItem>
           </List>
         </Center>

@@ -106,7 +106,7 @@ const Navbar = () => {
               <ShoppingCartOutlined />
             </Badge>
           </MenuItem>
-          <MenuItem> <Person/></MenuItem>
+          <MenuItem><NavLink to="/dashboard"><Person/></NavLink></MenuItem>
         </Right>
       </Wrapper>
     </Container>

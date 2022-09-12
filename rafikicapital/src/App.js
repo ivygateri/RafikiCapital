@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import AuthProvider from './contexts/AuthContext';
 import Home from './pages/Home';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
@@ -10,8 +10,29 @@ import About from './pages/About';
 import ForgotPassword from './pages/ForgotPassword';
 import UpdateProfile from './pages/UpdateProfile';
 import Contact from "./pages/Contact";
+import { Admin } from './pages/Admin';
+import { useStateValue } from './contexts/StateProvider';
+import { getAllFarmItems } from './utils/Firebasefunction';
+import { actionType } from './contexts/reducer';
 
 function App() {
+
+  const [{  }, dispatch] = useStateValue;
+
+  const fetchData = async () => {
+    await getAllFarmItems().then((data) => {
+      dispatch({
+        type: actionType.SET_FARM_ITEMS,
+        farmItems: data,
+      });
+    });
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+
   return(
          
     
@@ -30,6 +51,7 @@ function App() {
        <Route exact path="/" element={<Home/>} />
         <Route path="/about" element={<About/>} />
         <Route path="/contact" element={<Contact/>}/>
+        <Route path="/admin" element={<Admin/>}/>
         
 
       </Routes>

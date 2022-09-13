@@ -4,6 +4,9 @@ import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
 import {Link} from "react-router-dom";
+import { actionType } from "../contexts/reducer";
+
+import { useStateValue } from "../contexts/StateProvider";
 
 const Container = styled.div`
   height: 5%;
@@ -85,7 +88,19 @@ const NavLink = styled(Link)`
 }
  `
 
+
+
 const Navbar = () => {
+
+  const [{  cartShow, cartItems }, dispatch] = useStateValue();
+
+  const showCart = () => {
+    dispatch({
+      type: actionType.SET_CART_SHOW,
+      cartShow: !cartShow,
+    });
+  };
+
   return (
     <Container>
       <Wrapper>
@@ -102,8 +117,17 @@ const Navbar = () => {
           <MenuItem><NavLink to="/register">REGISTER</NavLink></MenuItem>
           <MenuItem><NavLink to="/signin">SIGN IN</NavLink></MenuItem>
           <MenuItem>
-            <Badge badgeContent={4} color="primary">
-              <ShoppingCartOutlined />
+            <Badge onClick={showCart} >
+              <ShoppingCartOutlined> 
+              {cartItems && cartItems.length > 0 && (
+            <div className=" absolute -top-2 -right-2 w-5 h-5 rounded-full bg-cartNumBg flex items-center justify-center">
+              <p className="text-xs text-white font-semibold">
+                {cartItems.length}
+              </p>
+            </div>
+          )}
+                </ShoppingCartOutlined> 
+              
             </Badge>
           </MenuItem>
           <MenuItem><NavLink to="/dashboard"><Person/></NavLink></MenuItem>

@@ -2,7 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
 import {Link} from "react-router-dom";
-import { Menu } from "@material-ui/icons";
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
+import { Menu as MenuIcon  } from "@material-ui/icons";
+
 
 const Container = styled.div`
   height: 2%;
@@ -22,20 +26,20 @@ const Wrapper = styled.div`
 `;
 
 const Left = styled.div`
-  flex: 80%;
+  flex: 1;
   display: flex;
   align-items: center;
 `;
 
 const Right = styled.div`
-  flex: 1;
+  flex: 20%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   ${mobile({ flex: 2, justifyContent: "center" })}
 `;
 
-const MenuItem = styled.div`
+const MenuItem1 = styled.div`
 
   font-size: 20px;
   cursor: pointer;
@@ -64,11 +68,26 @@ const Links = () => {
     <Container>
        <Wrapper>
         <Left>
-       <MenuItem><NavLink to="/">Home</NavLink></MenuItem> 
-       <MenuItem><NavLink to="/about">About</NavLink></MenuItem>
-       <MenuItem><NavLink to="/contact">Contact Us</NavLink></MenuItem>
+       <MenuItem1><NavLink to="/">Home</NavLink></MenuItem1> 
+       <MenuItem1><NavLink to="/about">About</NavLink></MenuItem1>
+       <MenuItem1><NavLink to="/contact">Contact Us</NavLink></MenuItem1>
        </Left>
-       <Right><Menu/></Right>
+       <Right>
+       <PopupState variant="popover" popupId="demo-popup-menu" style={{innerWidth:10}}>
+      {(popupState) => (
+        <React.Fragment>
+          
+            <MenuIcon {...bindTrigger(popupState)}/>
+          
+          <Menu {...bindMenu(popupState)}>
+            <MenuItem onClick={popupState.close}><NavLink to="/fruits">Fruits</NavLink></MenuItem>
+            <MenuItem onClick={popupState.close}><NavLink to="/vegetables">Vegetables</NavLink></MenuItem>
+            <MenuItem onClick={popupState.close}><NavLink to="/logout">Logout</NavLink></MenuItem>
+          </Menu>
+        </React.Fragment>
+      )}
+    </PopupState>
+       </Right>
     </Wrapper>
     </Container>
   );

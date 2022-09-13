@@ -38,34 +38,51 @@ export const sliderItems = [
   export const popularProducts = [
     {
       id:1,
-      img:"https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Jake-Guitar-Vintage-Crusher-Tee_68382_1_lg.png",
+      img:"https://img.freepik.com/premium-photo/two-halves-fresh-avocado-isolated-white-space-design-element-product-label-catalog-print_106885-2316.jpg?w=2000",
+      title: "Avocados",
+      price: "Kshs 40 each",
     },
     {
       id:2,
-      img:"https://cdn.shopify.com/s/files/1/0101/4832/products/Angela_Natural_Tee.png?v=1606780388",
+      img:"https://www.seekpng.com/png/detail/9-91999_green-bananas-png-image-picture-green-banana-png.png",
+      title: "Bananas",
+      price: "Kshs 120 each bunch",
     },
     {
       id:3,
-      img:"https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+      img:"https://www.kindpng.com/picc/m/22-220799_strawberry-png-transparent-png.png",
+      title: "Strawberries",
+      price: "Kshs 300 each pack",
     },
     {
       id:4,
-      img:"https://www.burdastyle.com/pub/media/catalog/product/cache/7bd3727382ce0a860b68816435d76e26/107/BUS-PAT-BURTE-1320516/1170x1470_BS_2016_05_132_front.png",
+      img:"https://www.kindpng.com/picc/m/143-1432682_spinach-png-transparent-png.png",
+      title: "Spinach",
+      price: "Kshs 30 each",
     },
     {
       id:5,
-      img:"https://images.ctfassets.net/5gvckmvm9289/3BlDoZxSSjqAvv1jBJP7TH/65f9a95484117730ace42abf64e89572/Noissue-x-Creatsy-Tote-Bag-Mockup-Bundle-_4_-2.png",
+      img:"https://www.kindpng.com/picc/m/68-681226_transparent-cute-potato-png-transparent-background-potato-png.png",
+      title: "Potatoes",
+      price: "Kshs 100 per kg",
     },
     {
       id:6,
-      img:"https://d3o2e4jr3mxnm3.cloudfront.net/Rocket-Vintage-Chill-Cap_66374_1_lg.png",
+      img:"https://www.kindpng.com/picc/m/131-1311135_cabbage-png-free-image-download-cabbage-png-transparent.png",
+      title: "Cabbage",
+      price: "Kshs 40 each",
     },
     {
       id:7,
-      img:"https://www.vintageindustries.nl/download_front/qympzk1762/2217_Arrow_Jacket_Forest.png",
+      img:"https://www.kindpng.com/picc/m/131-1311135_cabbage-png-free-image-download-cabbage-png-transparent.png",
+      title: "Cabbage",
+      price: "Kshs 40 each",
     },
     {
       id:8,
-      img:"https://www.pngarts.com/files/3/Women-Jacket-PNG-High-Quality-Image.png",
+      img:"https://www.kindpng.com/picc/m/131-1311135_cabbage-png-free-image-download-cabbage-png-transparent.png",
+      title: "Cabbage",
+      price: "Kshs 40 each",
     },
+   
   ]

@@ -15,6 +15,7 @@ import {
     display: flex;
     background: #138808;
     width: 100%;
+    max-width: 100vw;
     
 
 
@@ -22,7 +23,7 @@ import {
   `;
   
   const Left = styled.div`
-    flex: 25%;
+    flex: 1;
     display: flex-start;
     flex-direction: column;
     padding: 5px;
@@ -50,7 +51,7 @@ import {
   `;
   
   const Center = styled.div`
-    flex: 35%;
+    flex: 1;
     padding: 5px 20px;
     ${mobile({ display: "none" })}
   `;
@@ -74,7 +75,7 @@ import {
   `;
   
   const Right = styled.div`
-    flex: 40%;
+    flex: 1;
     padding: 5px 20px;
     ${mobile({ backgroundColor: "#fff8f8" })}
   

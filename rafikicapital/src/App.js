@@ -14,10 +14,12 @@ import { Admin } from './pages/Admin';
 import { useStateValue } from './contexts/StateProvider';
 import { getAllFarmItems } from './utils/Firebasefunction';
 import { actionType } from './contexts/reducer';
+import Fruit from './pages/Fruit';
+import CartContainer from './Components/CartContainer';
 
-function App() {
+const App = () => {
 
-  const [{  }, dispatch] = useStateValue;
+  const [{ farmItems }, dispatch] = useStateValue();
 
   const fetchData = async () => {
     await getAllFarmItems().then((data) => {
@@ -37,7 +39,7 @@ function App() {
          
     
 
-     <Router> 
+     
      <AuthProvider>
       <Routes>
      
@@ -52,11 +54,13 @@ function App() {
         <Route path="/about" element={<About/>} />
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/admin" element={<Admin/>}/>
+        <Route path="/fruits" element={<Fruit/>}/>
+        
         
 
       </Routes>
       </AuthProvider>
-      </Router>
+     
       
       
       

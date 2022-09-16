@@ -26,12 +26,12 @@ async  function handleLogout(){
     <Container className="d-flex align-items-center justify-content-center" style={{minHeight: "100vh"}}>
       <div className='w-100' style={{maxWidth: "400px"}}>
     <>
-<Card>
+<Card style={{backgroundColor: '#088752', height:'50vh', borderRadius:'25px', opacity:'0.9'}}>
   <Card.Body>
-    <h2 className='text-center mb-4'>Profile</h2>
+    <h2 className='text-center mb-4 text-white'>Profile</h2>
     {error && <Alert variant="danger">{error}</Alert>}
     <strong>Email:</strong> {currentUser.email}
-    <Link to="/update-profile" className="btn btn-primary w-100 mt-3">
+    <Link to="/update-profile" className="btn  w-100 mt-3" style={{backgroundColor:'#FCE205' , borderRadius:'25px'}}>
     Update Profile
     </Link>
 
@@ -39,7 +39,7 @@ async  function handleLogout(){
 </Card>
 
 <div className='w-100 text-center mt-2'>
-        <Button variant="link" onClick={handleLogout}>Log Out</Button>
+        <Button variant="link" onClick={handleLogout} style={{backgroundColor: '#FCE205', borderRadius:'25px', border: '#138808', color:'black'}}>Log Out</Button>
     </div>
 
 </>

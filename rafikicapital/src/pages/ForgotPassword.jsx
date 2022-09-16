@@ -33,28 +33,28 @@ export default function ForgotPassword() {
     <Container className="d-flex align-items-center justify-content-center" style={{minHeight: "100vh"}}>
       <div className='w-100' style={{maxWidth: "400px"}}>
     <>
-    <Card>
+    <Card style={{backgroundColor: '#088752', height:'80vh', borderRadius:'25px', opacity:'0.9'}}>
         <Card.Body>
-            <h2 className="text-center mb-4">Password Reset</h2>
+            <h2 className="text-center mb-4 text-white">Password Reset</h2>
             {error && <Alert variant="danger">{error}</Alert>}
             {message && <Alert variant="success">{message}</Alert>}
             <Form onSubmit = {handleSubmit}>
                 <Form.Group id="email">
                    <Form.Label>Email</Form.Label> 
-                   <Form.Control type="email" ref={emailRef} required />
+                   <Form.Control type="email" style={{borderRadius:'25px', borderColor:'#FCE205'}} ref={emailRef} required  placeholder='Enter your email'/>
                 </Form.Group>
                 <br></br>
-                <Button disabled={loading} className='w-100' type="submit">
+                <Button disabled={loading} className='w-100 text-black' style={{backgroundColor: '#FCE205', borderRadius:'25px', border: '#138808'}} type="submit">
                     Reset Password
                 </Button>
             </Form>
-            <div className='w-100 text-center mt-3'>
-                <Link to='/signin'>Sign In</Link>
+            <div className='w-100 text-center mt-3 '>
+                <Link to='/signin' style={{color:'black'}}>Sign In</Link>
             </div>
         </Card.Body>
     </Card>
-    <div className='w-100 text-center mt-2'>
-        Need an account? <Link to="/register">Register</Link>
+    <div className='w-100 text-center mt-2 text-yellow-400'>
+        Need an account? <Link to="/register" style={{color: '#fce205' }}>Register</Link>
     </div>
     </>
     </div>
